@@ -8,9 +8,11 @@ const nextConfig = {
   // Static export
   output: 'export',
 
-  // GitHub Pages base path
-  basePath: '/portfolio-nextjs',
-  assetPrefix: '/portfolio-nextjs',
+  // GitHub Pages base path (only in production)
+  ...(process.env.NODE_ENV === 'production' && {
+    basePath: '/portfolio-nextjs',
+    assetPrefix: '/portfolio-nextjs',
+  }),
 
   // Add trailing slash to file names
   trailingSlash: true,

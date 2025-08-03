@@ -15,9 +15,10 @@ import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
   PROJECTS,
   WORK_EXPERIENCE,
-  BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
+  EDUCATION,
+  SKILLS,
 } from './data'
 
 const VARIANTS_CONTAINER = {
@@ -137,8 +138,8 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            C#、Unity、Blazor、Azureを活用したVR/xR開発を専門とするソフトウェアエンジニア。
+            現在はTELEXISTENCE Inc.でSenior VPとしてAIロボットのVRオペレーションプラットフォーム開発に従事。
           </p>
         </div>
       </motion.section>
@@ -214,6 +215,42 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
+        <h3 className="mb-5 text-lg font-medium">Education</h3>
+        <div className="rounded-2xl bg-zinc-50/40 p-4 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+          <h4 className="font-normal dark:text-zinc-100">
+            {EDUCATION.university} ({EDUCATION.universityEn})
+          </h4>
+          <p className="text-zinc-600 dark:text-zinc-400">
+            {EDUCATION.degree}
+          </p>
+          <p className="text-zinc-500 dark:text-zinc-500">
+            {EDUCATION.period}
+          </p>
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-lg font-medium">Skills</h3>
+        <div className="flex flex-wrap gap-2">
+          {SKILLS.map((skill) => (
+            <span
+              key={skill.name}
+              className="rounded-full bg-zinc-100 px-3 py-1.5 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+            >
+              {skill.name}
+            </span>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* TODO: ブログ記事を追加 */}
+      {/* <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
         <h3 className="mb-3 text-lg font-medium">Blog</h3>
         <div className="flex flex-col space-y-0">
           <AnimatedBackground
@@ -244,7 +281,7 @@ export default function Personal() {
             ))}
           </AnimatedBackground>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       <motion.section
         variants={VARIANTS_SECTION}

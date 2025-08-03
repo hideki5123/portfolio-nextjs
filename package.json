@@ -1,6 +1,7 @@
 {
-  "name": "portfolio-nextjs",
+  "name": "hideki5123-portfolio",
   "version": "0.1.0",
+  "description": "Hideki Koike のポートフォリオサイト",
   "private": true,
   "scripts": {
     "dev": "next dev",

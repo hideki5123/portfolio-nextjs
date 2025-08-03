@@ -29,47 +29,79 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Motion Primitives Pro',
+    name: 'HandTrackingML1',
     description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: 'https://pro.motion-primitives.com/',
+      'Hand tracking implementation for Magic Leap 1. TODO: プロジェクト説明を補完',
+    link: 'https://github.com/hideki5123/HandTrackingML1',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project1',
   },
   {
-    name: 'Motion Primitives',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
+    name: 'Test-UIElements',
+    description: 'UI elements testing repository. TODO: プロジェクト説明を補完',
+    link: 'https://github.com/hideki5123/Test-UIElements',
     video:
       'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
     id: 'project2',
+  },
+  {
+    name: 'GitAutoMaker',
+    description: 'Automated Git workflow tool. TODO: プロジェクト説明を補完',
+    link: 'https://github.com/hideki5123/GitAutoMaker',
+    video:
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    id: 'project3',
+  },
+  {
+    name: 'UnityTemplate',
+    description: 'Unity project template. TODO: プロジェクト説明を補完',
+    link: 'https://github.com/hideki5123/UnityTemplate',
+    video:
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    id: 'project4',
+  },
+  {
+    name: 'PlayCode',
+    description: 'Code playground application. TODO: プロジェクト説明を補完',
+    link: 'https://github.com/hideki5123/PlayCode',
+    video:
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    id: 'project5',
+  },
+  {
+    name: 'LookingGlass',
+    description: 'Looking Glass display integration. TODO: プロジェクト説明を補完',
+    link: 'https://github.com/hideki5123/LookingGlass',
+    video:
+      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    id: 'project6',
   },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
+    company: 'TELEXISTENCE Inc.',
+    title: 'Senior VP & Software Engineer',
+    start: '2020',
     end: 'Present',
-    link: 'https://ibelick.com',
+    link: 'https://tx-inc.com/',
     id: 'work1',
   },
   {
-    company: 'Freelance',
-    title: 'Design Engineer',
-    start: '2022',
-    end: '2024',
-    link: 'https://ibelick.com',
+    company: 'Synamon Inc.',
+    title: 'Virtual Reality Software Engineer',
+    start: '2018',
+    end: '2020',
+    link: 'https://synamon.com/',
     id: 'work2',
   },
   {
-    company: 'Freelance',
-    title: 'Front-end Developer',
+    company: 'Toyota Motor Corporation',
+    title: 'Engineer, Prototype Department',
     start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
+    end: '2018',
+    link: 'https://global.toyota/',
     id: 'work3',
   },
 ]
@@ -106,20 +138,36 @@ export const BLOG_POSTS: BlogPost[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
+    link: 'https://github.com/hideki5123',
   },
   {
-    label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
+    label: 'X',
+    link: 'https://x.com/hideki5123',
   },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/hideki-koike-01297114b/',
   },
   {
-    label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
+    label: 'YouTrust',
+    link: 'https://youtrust.jp/users/f96ae6618c833b47125ab4ab86fa6472',
   },
 ]
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'hdkkik@gmail.com'
+
+export const EDUCATION = {
+  university: '東京理科大学',
+  universityEn: 'Tokyo University of Science',
+  degree: '電気電子情報工学科 学士',
+  degreeEn: 'Bachelor of Electrical, Electronic and Information Engineering',
+  period: '2011 - 2017',
+}
+
+export const SKILLS = [
+  { name: 'C#', category: 'language' },
+  { name: 'Unity', category: 'framework' },
+  { name: 'Blazor', category: 'framework' },
+  { name: 'Azure', category: 'cloud' },
+  { name: 'VR/xR', category: 'technology' },
+]
