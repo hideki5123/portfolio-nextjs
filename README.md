@@ -1,8 +1,7 @@
-<img src="/public/cover.jpg" alt="Cover image representing Nim, a personal website template" width="100%" />
 
-Nim is a free and open-source personal website template built with Next.js 15, React 19, Tailwind CSS v4, and Motion. Designed for developers, designers, and founders, it combines minimalism with delightful animated components powered by [Motion-Primitives](https://motion-primitives.com).
+# Portfolio Next.js
 
-Live demo: [https://nim-fawn.vercel.app](https://nim-fawn.vercel.app)
+A modern portfolio website built with Next.js 15, React 19, Tailwind CSS v4, and Motion. Features static export support for GitHub Pages deployment.
 
 ## Features
 
@@ -17,13 +16,11 @@ Live demo: [https://nim-fawn.vercel.app](https://nim-fawn.vercel.app)
 
 ## Getting Started
 
-For detailed setup instructions, refer to the [Installation Guide](./INSTALLATION.md).
-
 ### Quick Start
 
 ```bash
-git clone https://github.com/ibelick/nim.git
-cd nim
+git clone https://github.com/hideki5123/portfolio-nextjs.git
+cd portfolio-nextjs
 npm install
 npm run dev
 ```
@@ -42,7 +39,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests to improve Nim.
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ## Deployment
 
@@ -69,12 +66,33 @@ This template is configured for easy deployment to GitHub Pages:
 
 Your site will be available at `https://[username].github.io/[repo-name]/`
 
-### Vercel
+### Other Platforms
 
-For the easiest deployment experience, you can also use Vercel:
+This template can also be deployed to other platforms that support Next.js static exports, such as:
+- Vercel
+- Netlify
+- Cloudflare Pages
+- AWS S3 + CloudFront
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fibelick%2Fnim&env=NEXT_PUBLIC_SITE_URL&project-name=nim&repository-name=nim&redirect-url=https%3A%2F%2Ftwitter.com%2Fibelick&demo-title=Nim&demo-description=Nim%20is%20a%20free%20and%20open-source%20minimal%20personal%20website%20template%20built%20with%20Next.js%2015%2C%20React%2019%2C%20and%20Motion-Primitives.&demo-url=https%3A%2F%2Fnim.vercel.app&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fibelick%2Fnim%2Frefs%2Fheads%2Fmain%2F.github%2Fassets%2Freadme.png&teamSlug=ibelick)
+## Testing
 
-## About
+The project includes E2E tests to verify deployments:
 
-Nim is designed to make personal branding effortless and beautiful. If you enjoy it, consider sharing it and exploring [Motion-Primitives Pro](https://pro.motion-primitives.com/).
+```bash
+# Test local static build
+npm run test:local
+
+# Test GitHub Pages deployment
+npm run test:github-pages
+```
+
+For more details, see the [E2E testing documentation](./tests/e2e/README.md).
+
+## Documentation
+
+- [GitHub Pages Deployment Guide](./docs/GITHUB_PAGES_DEPLOYMENT.md)
+- [E2E Testing Guide](./tests/e2e/README.md)
+
+## License
+
+This project is open source and available under the MIT License.
