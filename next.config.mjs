@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   
-  // 静的エクスポート
+  // Static export
   output: 'export',
 
   // GitHub Pages のベースパス
