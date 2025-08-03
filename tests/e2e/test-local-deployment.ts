@@ -109,9 +109,9 @@ async function testLocalDeployment(): Promise<void> {
       console.log('JS paths:', assetPaths.js.slice(0, 2));
 
       // Check if paths contain basePath
-      const hasBasePath = assetPaths.css.some(path => path.includes('/portfolio-nextjs/')) ||
-                         assetPaths.js.some(path => path.includes('/portfolio-nextjs/'));
-      console.log(`\nAssets use basePath (/portfolio-nextjs/): ${hasBasePath ? '✓ Yes' : '✗ No'}`);
+      const hasBasePath = assetPaths.css.some(path => path.includes(BASE_PATH)) ||
+                         assetPaths.js.some(path => path.includes(BASE_PATH));
+      console.log(`\nAssets use basePath (${BASE_PATH}): ${hasBasePath ? '✓ Yes' : '✗ No'}`);
 
       // Test navigation with basePath simulation
       console.log('\n--- Testing Navigation ---');
