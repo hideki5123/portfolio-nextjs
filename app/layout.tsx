@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     default: 'Portfolio',
     template: '%s | Portfolio',
   },
+  description: "A portfolio site showcasing Hideki's projects, skills, and experience.",
 };
 
 const geist = Geist({
