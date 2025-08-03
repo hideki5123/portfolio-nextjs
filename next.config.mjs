@@ -12,7 +12,7 @@ const nextConfig = {
   basePath: '/portfolio-nextjs',
   assetPrefix: '/portfolio-nextjs',
 
-  // ファイル名にスラッシュ末尾を付与
+  // Add trailing slash to file names
   trailingSlash: true,
 };
 
