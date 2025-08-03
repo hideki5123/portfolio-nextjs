@@ -12,6 +12,8 @@
 
 # testing
 /coverage
+/tests/e2e/screenshots
+/tests/e2e/dist
 
 # next.js
 /.next/
