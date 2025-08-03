@@ -1,5 +1,5 @@
 {
-  "name": "nim",
+  "name": "portfolio-nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build && echo. > out/.nojekyll",
+    "deploy": "gh-pages -d out -t"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.54.2",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
