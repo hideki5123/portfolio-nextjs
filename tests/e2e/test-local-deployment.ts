@@ -124,7 +124,7 @@ async function testLocalDeployment(): Promise<void> {
         console.log(`First blog link href: ${href}`);
 
         // Check if href includes basePath
-        if (href?.includes('/portfolio-nextjs/')) {
+        if (href?.includes(BASE_PATH)) {
           console.log('✓ Blog links include basePath');
         } else {
           console.log('✗ Blog links missing basePath');
