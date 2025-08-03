@@ -8,7 +8,7 @@ const nextConfig = {
   // Static export
   output: 'export',
 
-  // GitHub Pages のベースパス
+  // GitHub Pages base path
   basePath: '/portfolio-nextjs',
   assetPrefix: '/portfolio-nextjs',
 
