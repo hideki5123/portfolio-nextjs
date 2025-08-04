@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import fs from 'fs';
 import path from 'path';
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import WorkDetail from '@/components/WorkDetail';
+import WorkDetailFullWidth from '@/components/WorkDetailFullWidth';
 
 interface WorkPageProps {
   params: Promise<{
@@ -56,8 +56,8 @@ export default async function WorkPage({ params }: WorkPageProps) {
     .join(' ');
 
   return (
-    <WorkDetail title={formattedSlug}>
+    <WorkDetailFullWidth title={formattedSlug}>
       <MDXRemote source={content} />
-    </WorkDetail>
+    </WorkDetailFullWidth>
   );
 }

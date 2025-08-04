@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(ls:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm run:*)",
+      "Bash(pnpm next:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(where pnpm)",
+      "Bash(where node)",
+      "Bash(node_modules.bin:*)"
+    ],
+    "deny": []
+  }
+}

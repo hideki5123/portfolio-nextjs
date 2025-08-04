@@ -30,3 +30,232 @@
   --sh-property: #73daca;
   --sh-entity: #e0af68;
 }
+
+/* Responsive Typography System */
+@layer base {
+  :root {
+    /* Fluid typography scales */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --text-sm: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);
+    --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.875rem);
+    --text-3xl: clamp(1.875rem, 1.65rem + 1.125vw, 2.25rem);
+    --text-4xl: clamp(2.25rem, 1.95rem + 1.5vw, 3rem);
+    --text-5xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+    
+    /* Line height scales */
+    --leading-tight: 1.25;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+    --leading-loose: 2;
+  }
+  
+  /* Base font sizes */
+  html {
+    font-size: 16px; /* Ensure minimum 16px for mobile readability */
+  }
+  
+  /* Responsive heading styles */
+  h1 { 
+    font-size: var(--text-4xl); 
+    line-height: var(--leading-tight);
+  }
+  h2 { 
+    font-size: var(--text-3xl); 
+    line-height: var(--leading-tight);
+  }
+  h3 { 
+    font-size: var(--text-2xl); 
+    line-height: var(--leading-normal);
+  }
+  h4 { 
+    font-size: var(--text-xl); 
+    line-height: var(--leading-normal);
+  }
+  h5 { 
+    font-size: var(--text-lg); 
+    line-height: var(--leading-normal);
+  }
+  h6 { 
+    font-size: var(--text-base); 
+    line-height: var(--leading-normal);
+  }
+  
+  /* Body text */
+  p, li { 
+    font-size: var(--text-base); 
+    line-height: var(--leading-relaxed);
+  }
+  
+  /* Small text */
+  small, .text-sm { 
+    font-size: var(--text-sm); 
+  }
+  
+  .text-xs { 
+    font-size: var(--text-xs); 
+  }
+}
+
+/* Responsive utilities */
+@layer utilities {
+  /* Touch-friendly tap targets */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Disable hover on touch devices */
+  @media (hover: hover) and (pointer: fine) {
+    .hover\:hover-effect:hover {
+      /* Apply hover effects only on devices with precise pointers */
+    }
+  }
+  
+  /* Better focus states for mobile */
+  .focus-visible\:ring-mobile:focus-visible {
+    @apply ring-2 ring-blue-500 ring-offset-2;
+  }
+  
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Safe area padding for notched devices */
+  .safe-padding {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  /* Responsive container queries for component-level responsiveness */
+  @container (min-width: 400px) {
+    .container-responsive {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Performance optimizations */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    :root {
+      --color-contrast-border: CanvasText;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    
+    body {
+      font-size: 12pt;
+      line-height: 1.5;
+    }
+  }
+}
+
+/* Work Detail Full Width Override */
+@layer components {
+  /* Override parent layout constraints for work pages */
+  body:has(main.work-detail-full-width) .flex.min-h-screen > div {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  
+  body:has(main.work-detail-full-width) header,
+  body:has(main.work-detail-full-width) footer {
+    display: none !important;
+  }
+}
+
+/* Work Detail Page Full Width Styles */
+@layer utilities {
+  /* Full width prose for work pages */
+  .work-detail-full-width .prose {
+    max-width: none !important;
+  }
+  
+  /* Responsive typography for full width */
+  @media (min-width: 768px) {
+    .work-detail-full-width .prose {
+      font-size: 1.0625rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .work-detail-full-width .prose {
+      font-size: 1.125rem;
+      line-height: 1.75;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    .work-detail-full-width .prose {
+      font-size: 1.25rem;
+    }
+  }
+  
+  /* Grid layout for sections on wide screens */
+  @media (min-width: 1280px) {
+    .work-detail-full-width .prose {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    /* Two-column grid for lists on wide screens */
+    .work-detail-full-width .prose ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem 3rem;
+    }
+  }
+  
+  @media (min-width: 1536px) {
+    /* Three-column grid for lists on ultra-wide screens */
+    .work-detail-full-width .prose ul {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Better visual hierarchy */
+  .work-detail-full-width .prose h2 {
+    @apply relative mt-16 mb-8;
+  }
+  
+  .work-detail-full-width .prose h2::before {
+    content: '';
+    @apply absolute -left-4 top-0 bottom-0 w-1 bg-blue-500 rounded-full;
+  }
+  
+  /* Improved list styling */
+  .work-detail-full-width .prose ul li {
+    @apply relative pl-6;
+  }
+  
+  .work-detail-full-width .prose ul li::before {
+    content: '▸';
+    @apply absolute left-0 text-blue-500 font-bold;
+  }
+}

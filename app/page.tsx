@@ -59,7 +59,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
           autoPlay
           loop
           muted
-          className="aspect-video w-full cursor-zoom-in rounded-xl"
+          className="aspect-video w-full cursor-zoom-in rounded-lg sm:rounded-xl"
         />
       </MorphingDialogTrigger>
       <MorphingDialogContainer>
@@ -101,7 +101,7 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
         href={link}
-        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-3 py-1.5 sm:px-2.5 sm:py-1 text-xs sm:text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 min-h-[44px] sm:min-h-0"
       >
         {children}
         <svg
@@ -127,7 +127,7 @@ function MagneticSocialLink({
 export default function Personal() {
   return (
     <motion.main
-      className="space-y-24"
+      className="space-y-16 sm:space-y-20 lg:space-y-24"
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
@@ -137,7 +137,7 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex-1">
-          <p className="text-zinc-600 dark:text-zinc-400">
+          <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
             C#、Unity、Blazor、Azureを活用したVR/xR開発を専門とするソフトウェアエンジニア。
             現在はTELEXISTENCE Inc.でSenior VPとしてAIロボットのVRオペレーションプラットフォーム開発に従事。
           </p>
@@ -148,8 +148,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <h3 className="mb-4 sm:mb-5 text-base sm:text-lg font-medium">Selected Projects</h3>
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
               <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
@@ -157,14 +157,14 @@ export default function Personal() {
               </div>
               <div className="px-1">
                 <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                  className="font-base group relative inline-block font-[450] text-sm sm:text-base text-zinc-900 dark:text-zinc-50"
                   href={project.link}
                   target="_blank"
                 >
                   {project.name}
                   <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 dark:bg-zinc-50 transition-all duration-200 group-hover:max-w-full"></span>
                 </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
+                <p className="text-xs sm:text-sm lg:text-base text-zinc-600 dark:text-zinc-400">
                   {project.description}
                 </p>
               </div>
@@ -177,8 +177,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
-        <div className="flex flex-col space-y-2">
+        <h3 className="mb-4 sm:mb-5 text-base sm:text-lg font-medium">Work Experience</h3>
+        <div className="flex flex-col space-y-2 sm:space-y-3">
           {WORK_EXPERIENCE.map((job) => (
             <Link
               className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
@@ -189,17 +189,17 @@ export default function Personal() {
                 className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
                 size={64}
               />
-              <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-                <div className="relative flex w-full flex-row justify-between">
+              <div className="relative h-full w-full rounded-[15px] bg-white p-3 sm:p-4 dark:bg-zinc-950">
+                <div className="relative flex w-full flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
                   <div>
-                    <h4 className="font-normal dark:text-zinc-100">
+                    <h4 className="text-sm sm:text-base font-normal dark:text-zinc-100">
                       {job.title}
                     </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
+                    <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
                       {job.company}
                     </p>
                   </div>
-                  <p className="text-zinc-600 dark:text-zinc-400">
+                  <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
                     {job.start} - {job.end}
                   </p>
                 </div>
@@ -213,15 +213,15 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Education</h3>
-        <div className="rounded-2xl bg-zinc-50/40 p-4 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-          <h4 className="font-normal dark:text-zinc-100">
+        <h3 className="mb-4 sm:mb-5 text-base sm:text-lg font-medium">Education</h3>
+        <div className="rounded-2xl bg-zinc-50/40 p-3 sm:p-4 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+          <h4 className="text-sm sm:text-base font-normal dark:text-zinc-100">
             {EDUCATION.university} ({EDUCATION.universityEn})
           </h4>
-          <p className="text-zinc-600 dark:text-zinc-400">
+          <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
             {EDUCATION.degree}
           </p>
-          <p className="text-zinc-500 dark:text-zinc-500">
+          <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-500">
             {EDUCATION.period}
           </p>
         </div>
@@ -231,12 +231,12 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Skills</h3>
-        <div className="flex flex-wrap gap-2">
+        <h3 className="mb-4 sm:mb-5 text-base sm:text-lg font-medium">Skills</h3>
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {SKILLS.map((skill) => (
             <span
               key={skill.name}
-              className="rounded-full bg-zinc-100 px-3 py-1.5 text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
+              className="rounded-full bg-zinc-100 px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm text-zinc-700 dark:bg-zinc-800 dark:text-zinc-300"
             >
               {skill.name}
             </span>
@@ -285,14 +285,14 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
-        <p className="mb-5 text-zinc-600 dark:text-zinc-400">
+        <h3 className="mb-4 sm:mb-5 text-base sm:text-lg font-medium">Connect</h3>
+        <p className="mb-4 sm:mb-5 text-sm sm:text-base text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>
         </p>
-        <div className="flex items-center justify-start space-x-3">
+        <div className="flex flex-wrap items-center justify-start gap-2 sm:gap-3">
           {SOCIAL_LINKS.map((link) => (
             <MagneticSocialLink key={link.label} link={link.link}>
               {link.label}
