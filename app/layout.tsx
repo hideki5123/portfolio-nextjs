@@ -24,6 +24,13 @@ export const metadata: Metadata = {
     template: '%s | Portfolio',
   },
   description: "A portfolio site showcasing Hideki's projects, skills, and experience.",
+  icons: {
+    icon: [
+      { url: 'https://github.com/hideki5123.png', sizes: '32x32' },
+      { url: 'https://github.com/hideki5123.png', sizes: '16x16' },
+    ],
+    apple: 'https://github.com/hideki5123.png',
+  },
 };
 
 const geist = Geist({
