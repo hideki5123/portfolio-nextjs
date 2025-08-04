@@ -13,6 +13,8 @@ type WorkExperience = {
   end: string
   link: string
   id: string
+  type?: string
+  location?: string
 }
 
 type BlogPost = {
@@ -87,6 +89,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: 'Present',
     link: 'https://tx-inc.com/',
     id: 'work1',
+    type: 'Full-time',
+    location: 'Tokyo, Japan',
   },
   {
     company: 'Synamon Inc.',
@@ -95,6 +99,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: '2020',
     link: 'https://synamon.com/',
     id: 'work2',
+    type: 'Full-time',
+    location: 'Tokyo, Japan',
   },
   {
     company: 'Toyota Motor Corporation',
@@ -103,6 +109,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     end: '2018',
     link: 'https://global.toyota/',
     id: 'work3',
+    type: 'Full-time',
+    location: 'Aichi, Japan',
   },
 ]
 
